@@ -8,6 +8,11 @@ env.hosts = ['34.75.8.225', '54.91.28.2']
 
 
 def do_deploy(archive_path):
+    """do_deploy
+
+    Args:
+        archive_path
+    """
     if not os.path.exists(archive_path):
         return False
 
