@@ -18,16 +18,16 @@ def show_hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def display_c():
+def display_c(text):
     """display C"""
-    return 'C %s' % escape(text.replace('_', ' '))
+    return 'C {}'.format(text.replace('_', ' '))
 
 
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/(<text>)', strict_slashes=False)
 def display_python(text="is cool"):
     """display python"""
-    return 'Python %s' % escape(text.replace('_', ' '))
+    return 'Python {}'.format(text.replace('_', ' '))
 
 
 if __name__ == '__main__':
